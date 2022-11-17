@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice 01</title>
+</head>
+<body>
+  <!-- 【1】 idを指定した要素を用意しておく。 -->
+  <div id="app"></div>
+
+  <script type="text/javascript">
+    // 【2】 idが指定された要素を取得し、そこにh1要素を追加する。
+    const app = document.querySelector('#app');
+    const header = document.createElement('h1');
+    const headerContext = document.createTextNode('Develop. Preview. Ship. Go!');
+    header.appendChild(headerContext);
+    app.appendChild(header);
+  </script>
+</body>
+</html>
