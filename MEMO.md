@@ -50,6 +50,39 @@ Next.jsを使えば、完全にインタラクティブで、高度に動的で�
 
 [参考サイト](https://nextjs.org/learn/foundations/from-javascript-to-react/updating-ui-with-javascript "")
 
-■ DOMメソッド + js を使って、空のHTMLファイルにh1要素を追加する。
+## DOMメソッド + js を使って、空のHTMLファイルにh1要素を追加する。
 
 [参考サイト](https://nextjs.org/learn/foundations/from-javascript-to-react/getting-started-with-react "")
+
+react は、Reactライブラリを提供する。
+react-dom は、DOMでReactを操作できるようメソッドを提供する。
+
+reactDOM.render() は、 第2引数で指定した要素に、第1引数の要素をレンダリングする。
+
+JSXは、Javascriptの構文拡張。
+JSXは、ブラウザでは解析できないので、babelなどのjsコンパイラーが必要。
+JSXは、3つのルールに従う必要がある。
+
+[参考サイト](https://nextjs.org/learn/foundations/from-javascript-to-react/essential-javascript-react "")
+
+Javascriptから見た、Reactのコア概念
+
+- 関数とアロー関数
+- オブジェクト
+- 配列と配列メソッド
+- 破壊
+- テンプレート リテラル
+- 三項演算子
+- ES モジュールとインポート/エクスポート構文
+
+Javascriptの最新バージョンを常に把握しておくことが重要。
+
+[参考サイト](https://nextjs.org/learn/foundations/from-javascript-to-react/react-core-concepts "")
+
+Reactアプリケーションを構築するために理解しておくべき3つの概念
+
+- Components
+- Props
+- State
+
+[参考サイト](https://nextjs.org/learn/foundations/from-javascript-to-react/building-ui-with-components "")
