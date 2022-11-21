@@ -19,3 +19,13 @@ Practice 01 の方法を「命令型プログラミング」と呼ぶ。
 [参考サイト](https://nextjs.org/learn/foundations/from-javascript-to-react/getting-started-with-react "")
 
 Reactを使えば、同じ処理でもプレーンなjsよりもコードを削減できる。
+
+## Practice 03 Reactを導入した動的なページ（宣言型プログラミング）
+
+Component は、関数の返り値としてUI要素を返すJavascriptの「関数」でしかない。
+
+Component は、頭文字を大文字にしてHTMLやJavascriptと区別して扱う。
+
+Component は、< /> で囲って使う。 ※ 関数名の時は< />はつかない。
+
+Component は、それぞれお互いに入れ子にすることができるが、レンダリングのための最上位要素しか ReactDOM.render() には渡すことができない。

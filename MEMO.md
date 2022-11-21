@@ -86,3 +86,21 @@ Reactアプリケーションを構築するために理解しておくべき3�
 - State
 
 [参考サイト](https://nextjs.org/learn/foundations/from-javascript-to-react/building-ui-with-components "")
+
+UIは、Component と呼ばれる小さなビルディングブロックから構成される。
+
+Componentは、再利用しやすいコードスニペットを生成する。
+
+Component を組み合わせて、（ページなど）より大きな構造をつくることができる。
+
+一部のUIを更新したいときは、該当するComponent のみ更新すれば済むので、UIの追加・更新・削除がしやすく保守しやすいコードになる。
+
+Component は、単なるJavascriptの「関数」でしかない。
+
+Component は、関数の返り値としてUI要素を返す。
+
+※ UIをプログラムでより扱いやすくするために、HTMLやCSSやJavascriptは仕様を大きく変えてきたのかもしれない。
+
+Component は、お互いに入れ子にすることができる。
+
+ReactDOM.render() には、入れ子されていない最上位要素を渡すことができる。
