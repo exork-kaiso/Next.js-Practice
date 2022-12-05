@@ -34,7 +34,7 @@ Component は、それぞれお互いに入れ子にすることができるが�
 
 Component を複製して再利用すると、表示内容やスタイルなどすべて同じ要素が複製される。
 
-## Practice 05
+## Practice 05 Props を使うことで、Component は表示内容を変更することができる。
 
 props を使うことで、Componentに引数を渡して、その引数を要素の中で使うことができる。
 
