@@ -104,3 +104,10 @@ Component は、関数の返り値としてUI要素を返す。
 Component は、お互いに入れ子にすることができる。
 
 ReactDOM.render() には、入れ子されていない最上位要素を渡すことができる。
+
+[参考サイト](https://nextjs.org/learn/foundations/from-javascript-to-react/displaying-data-with-props "")
+
+---
+
+Component を再利用した場合、同じComponent だが表示テキストを変更したり、同じComponent だが、表示内容を外部から事前に取得したい場合に対応することができない。
+

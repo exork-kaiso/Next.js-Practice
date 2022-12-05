@@ -29,3 +29,8 @@ Component は、頭文字を大文字にしてHTMLやJavascriptと区別して�
 Component は、< /> で囲って使う。 ※ 関数名の時は< />はつかない。
 
 Component は、それぞれお互いに入れ子にすることができるが、レンダリングのための最上位要素しか ReactDOM.render() には渡すことができない。
+
+## Practice 04 Component は、複製して再利用することができる。
+
+Component を複製して再利用すると、表示内容やスタイルなどすべて同じ要素が複製される。
+
