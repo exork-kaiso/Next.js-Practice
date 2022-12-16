@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice 08</title>
+</head>
+<body>
+
+  <!-- 【1】 idを指定した要素を用意しておく。 -->
+  <div id="app"></div>
+
+  <!-- 【2】 React + JSX を使うために、react と react-dom と babel を導入する。 -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- 【3】 スクリプトタイプを指定してJSXで処理する。 -->
+  <script type="text/jsx">
+
+    // 【4】 描画を行う要素を取得する。
+    const app = document.querySelector('#app');
+
+    function createTitle(title) {
+      if(title) {
+        return title;
+      } else {
+        return 'Default title.';
+      }
+    }
+
+    function Header({ title }) {
+      return <h1>{createTitle(title)}</h1>
+    }
+
+    function HomePage() {
+      return (
+        <div>
+          <Header title="React Love."/>
+          <Header title="No Music, No Life."/>
+          <Header />
+        </div>
+      );
+    }
+
+    // 【5】 入れ子されていない最上位要素をapp要素内に描画する。
+    ReactDOM.render(<HomePage />, app);
+  </script>
+</body>
+</html>

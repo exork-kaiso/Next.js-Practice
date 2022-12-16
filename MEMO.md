@@ -141,3 +141,19 @@ function Header({ title }) {
 }
 `
 
+プロップが渡されなかった場合にはデフォルト文字列を指定し、プロップが渡された場合はそのプロップを表示するような使い方ができる。
+
+`
+function createTitle(title) {
+   if(title) {
+     return title;
+   } else {
+     return 'Default title.';
+   }
+}
+
+function Header({ title }) {
+   return <h1>{createTitle(title)}</h1>
+}
+`
+
