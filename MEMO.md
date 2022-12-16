@@ -157,3 +157,11 @@ function Header({ title }) {
 }
 `
 
+上記（プロップが渡されなかった場合にはデフォルト文字列を指定し、プロップが渡された場合はそのプロップを表示する）処理を、三項演算子として書き換えることもできる。
+
+`
+function Header({ title }) {
+   return <h1>{ title ? title: 'Default title.' }</h1>;
+}
+`
+

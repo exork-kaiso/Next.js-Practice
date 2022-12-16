@@ -54,3 +54,9 @@ props に、title 引数をのまま指定する方法。
 Component に渡した Props を、さらに関数の引数として渡し、その戻り値を使う方法。
 
 この例では、Componentに、Propsが渡された場合と渡されなかった場合に、それぞれ処理を切り替えている。
+
+## Practice 09
+
+Practice 08 と同じ、Component に渡した Props を、さらに関数の引数として渡し、その戻り値を使う方法。
+
+Componentに、Propsが渡された場合と渡されなかった場合の処理の切り替えを、三項演算子で行っている。
