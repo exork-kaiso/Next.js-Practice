@@ -125,3 +125,19 @@ Headerコンポーネントに、titleプロップを渡す。
 
 ---
 
+Propsを、既存文字列と組み合わせて、こういう使い方をすることもできる。
+
+`
+function Header({ title }) {
+  return <h1>Cool {title}</h1>;
+}
+`
+
+Propsを、テンプレートリテラルと組み合わせて、こういう使い方をすることもできる。
+
+`
+function Header({ title }) {
+  return <h1>{`Cool ${title}`}</h1>;
+}
+`
+
