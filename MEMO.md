@@ -165,3 +165,28 @@ function Header({ title }) {
 }
 `
 
+---
+
+コンポーネントは、表示する文字列を配列として受け取ることもできる。
+
+Componentで配列を受け取ることで、データを操作し、スタイルは同じだが別の情報を持つ要素をつくることができる。
+
+`
+function HomePage() {
+   const names = ['A', 'B', 'C'];
+   return (
+     <div>
+       <Header title="React Love."/>
+       <Header title="No Music, No Life."/>
+       <Header />
+       <ul>
+         {names.map((name) => (
+            <li key={name}>{name}</li>
+         ))}
+       </ul>
+     </div>
+   );
+}
+`
+
+Componentで配列を扱おうとする時、Reactは配列内の要素を一意に識別する何かを必要とする。これはDOMを更新するときに要素を識別するときに認識される。
