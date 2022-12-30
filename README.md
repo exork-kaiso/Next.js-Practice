@@ -76,3 +76,51 @@ Practice 10 と同じく、配列の要素を Prop として Component に渡す
 この時、要素を一意に処理するために、key を指定している。
 
 これで実行時のエラーを回避することができる。
+
+## Practice 12
+
+Component内に（いいね）ボタンを追加する。
+
+onClickで、（いいね）ボタンをクリックした時のイベントを用意する。
+
+イベント名はキャメルケースで記述する。
+
+onClick / onChange（入力フィールド） / onSubmit（フォーム）
+
+Componentの中（return の外）に、イベントを処理する関数（ handleClick() ）を用意する。
+
+Reactには、hooks と呼ばれる一連の関数がある。
+
+hooks を使うと、stateなどの追加ロジックをComponentに追加する。
+
+stateは、時間の経過と共に変化するUI内の任意の情報で、ユーザー操作によって更新される。
+
+ユーザーがいいねボタンをクリックした回数を、stateを使って更新することができる。
+
+stateを管理するためのReacthook は、 useState()。
+
+`
+React.useState();
+`
+
+useState() は、配列を返す。
+
+返り値（配列）の最初の項目は、value。任意の分かりやすい名前をつけることが推奨される。
+
+返り値（配列）の2番目の項目は、update。値に対する関数です。setに続く任意の名前をつけることが慣例です。
+
+`
+React.useState(0);
+`
+
+useState()に値を入れることで、stateに初期値を指定することができる。
+
+Component内に状態変数を設置して、初期状態が機能していることを確認することができる。
+
+handleClick()イベントで、stateの更新関数（ setLikes() ）を呼び出す。
+
+いいねボタンがクリックされると、handleClick()が呼び出され、setLikes() 関数を呼び出して、like をインクリメントする。
+
+Propsとは異なり、StateはComponent内で開始され、保存される。
+
+stateをPropsとして子コンポーネントに渡すことができるが、stateを更新するためのロジックは、stateが初めにつくられたComponentに保持する必要がある。
