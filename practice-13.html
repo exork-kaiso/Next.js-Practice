@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice 13</title>
+</head>
+<body>
+
+  <!-- 【1】 idを指定した要素を用意しておく。 -->
+  <div id="app"></div>
+
+  <!-- 【2】 React + JSX を使うために、react と react-dom と babel を導入する。 -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- 【3】 スクリプトタイプを指定してJSXで処理する。 -->
+  <script type="text/jsx">
+
+    // 【4】 描画を行う要素を取得する。
+    const app = document.querySelector('#app');
+
+    function Header({ title }) {
+      return <h1>{ title ? title: 'Default title.' }</h1>;
+    }
+
+    function HomePage() {
+      const names = ['A', 'B', 'C'];
+
+      const [likes, setLikes] = React.useState(0);
+
+      function handleClick() {
+        setLikes(likes + 1);
+      }
+
+      return (
+        <div>
+          <Header title="Develop. Preview. Ship. Launch." />
+          <ul>
+            {names.map((name) => (
+              <li key={name}>{name}</li>
+            ))}
+          </ul>
+
+          <button onClick={handleClick}>Like({likes})</button>
+        </div>
+      );
+    }
+
+    // 【5】 入れ子されていない最上位要素をapp要素内に描画する。
+    ReactDOM.render(<HomePage />, app);
+  </script>
+</body>
+</html>

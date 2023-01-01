@@ -125,6 +125,32 @@ Headerコンポーネントに、titleプロップを渡す。
 
 ---
 
+ComponentにPropsを組み合わせることで、Componentに表示する文字列を変更することができるようになる。
+
+JSX構文では、定義した変数を{}で使うことができる。
+{}を使えば、JSXで記述された領域の仲で、Javascript領域の記述の仕方ができる。
+例）title という引数を使う場合。
+
+`
+{ title }
+`
+
+Propsを、JSXの変数として指定する方法。
+
+`
+function Header({ title }) {
+  return <h1>{title}</h1>;
+}
+`
+
+Propsオブジェクトのプロパティとして指定することもできる。
+
+`
+function Header(props) {
+  return <h1>{props.title}</h1>;
+}
+`
+
 Propsを、既存文字列と組み合わせて、こういう使い方をすることもできる。
 
 `

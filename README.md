@@ -124,3 +124,7 @@ handleClick()イベントで、stateの更新関数（ setLikes() ）を呼び�
 Propsとは異なり、StateはComponent内で開始され、保存される。
 
 stateをPropsとして子コンポーネントに渡すことができるが、stateを更新するためのロジックは、stateが初めにつくられたComponentに保持する必要がある。
+
+## Practice 13
+
+いいねボタンの最終完成コード。
