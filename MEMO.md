@@ -222,3 +222,38 @@ Componentで配列を扱おうとする時、Reactは配列内の要素を一意
 ## Practice 14
 
 [参考サイト](https://nextjs.org/learn/foundations/from-react-to-nextjs/getting-started-with-nextjs "")
+
+---
+
+[参考サイト](https://nextjs.org/learn/foundations/how-nextjs-works/development-and-production "")
+
+Next.js の開発中は、ローカルマシンでアプリケーションを構築し、実行する。
+
+Next.js の本番環境とは、アプリケーションをデプロイしてユーザーに使ってもらうための準備プロセス。
+
+Next.js は、アプリケーションの（1）開発段階と（2）本番段階の両方に機能を提供する。
+
+（1）アプリケーションの開発段階では、開発者とアプリケーション構築体験に最適化した機能がNext.jsから提供される。TypeScriptとESLintの統合、FastRefreshの提供 など。
+
+（2）本番環境では、Next.jsはコードを変換し、パフォーマンスとアクセシビリティを向上させて、エンドユーザーのUXを向上させる。
+
+（1）と（2）では考慮すべきことや目標が異なるため、アプリケーションの開発段階から本番環境へ移行する際は、多くの事を行う必要がある。（コードのコンパイル、バンドル、コードの圧縮、コードの分割 など）
+Next.jsはこれらの処理を担い、開発環境から本番環境への移行をサポートする。
+
+Next.jsのこれらの機能は、Rustで書かれたコンパイラとSWC（コンパイル、コードの圧縮、コードのバンドルなどを行うプラットフォーム）が実現させている。
+
+[参考サイト](https://nextjs.org/learn/foundations/how-nextjs-works/compiling "")
+
+[参考サイト](https://nextjs.org/learn/foundations/how-nextjs-works/minifying "")
+
+minifying は、コードの機能を変更せずにコード内の不要な記述を削除すること。ファイルサイズを小さくして、アプリケーションのパフォーマンスを高めることができれば成功。
+
+Next.jsでは、JavascriptファイルとCSSファイルが本番用に自動的に縮小される。
+
+[参考サイト](https://nextjs.org/learn/foundations/how-nextjs-works/bundling "")
+
+開発者は、開発時に内部モジュール、外部サードパーティパッケージを意識することなく、モジュール、コンポーネント、関数を別々に用意してアプリケーションを構築するが、そこには複雑なファイルの依存関係が発生する。
+
+バンドルはこれらの依存関係を解決し、ブラウザ用に最適化されたファイルにまとめることでユーザが使うリソースを減らし、アプリケーションのパフォーマンスを高めている。
+
+[参考サイト](https://nextjs.org/learn/foundations/how-nextjs-works/code-splitting "")
