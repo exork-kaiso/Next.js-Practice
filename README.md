@@ -128,3 +128,95 @@ stateをPropsとして子コンポーネントに渡すことができるが、s
 ## Practice 13
 
 いいねボタンの最終完成コード。
+
+## Practice 14
+
+CDNによってスクリプトをロードせず、npm によって react / react-dom をローカルにインストールする。
+
+`
+npm init
+npm install react react-dom next
+`
+
+※ Ubuntu の場合、事前に名前解決を行う必要がある。（PowerShellは名前解決の必要がない。）
+
+アプリケーションの依存関係は、node_modulesディレクトリ以下に含まれている。
+
+index.htmlファイルから、以下の記述を削除することができる。
+
+>> npm によってインストールされているため、不要。
+`
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+`
+
+>> Next.jsによって生成されるため、不要。
+`
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice 13</title>
+</head>
+<body>
+</body>
+</html>
+`
+
+>> Next.js がJSXをJavascriptに変換するコンパイラを備えているため、不要。
+`
+<div id="app"></div>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/jsx">
+  ReactDOM.render(<HomePage />, app);
+</script>
+`
+
+>> Reactモジュールを使うために、ファイル冒頭に以下のコードを記述する。
+`
+import { useState } from 'react';
+`
+
+>> Reactモジュールを使うため、React関数の記述は不要。
+`
+const [likes, setLikes] = React.useState(0);
+`
+>> 上記コードを、以下のコードに書き換える。
+`
+const [likes, setLikes] = useState(0);
+`
+
+上記コードを削除すると、HTMLファイルに残されたコードはJSXだけになるため、ファイルの拡張子を.htmlから.jsまたは.jsxに変更する。
+
+さて、Next.jsアプリに完全に移行するために、あと3つ必要なことがあります。
+
+1. index.jsファイルをpagesディレクトリ以下に移動する。
+2. 大元のReactコンポーネント（HomePage）を export default に指定することで、Next.jsが大元のReactコンポーネント（HomePage）をこのページのメインコンポーネントと判別して、レンダリングできるようにする。
+`
+function HomePage() {
+`
+>> 上記コードを、以下のコードに書き換える。
+`
+export default function HomePage() {
+`
+3. package.jsonファイルに、Next.jsの開発サーバーを起動するためのスクリプトを追加する。
+
+`
+"scripts": {
+  "dev": "next dev"
+},
+`
+
+ターミナルから以下のコマンドを実行し、ブラウザで localhost:3000 へアクセスすることで、ローカル環境をブラウザで確認することができる。
+
+`
+npm run dev
+`
+
+開発環境のファイルを保存すると、ブラウザは自動的に更新され、変更が反映される。
+
+これらの機能を Fast Refresh と呼ぶ。
+
+Next.jsで開発することで、Reactを使いつつ、必要なモジュールや複雑な設定を考慮せずにUIを構築し、Fast Refresh によってプレビューすることができるようになった。

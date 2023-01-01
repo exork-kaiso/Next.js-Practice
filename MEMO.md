@@ -216,3 +216,9 @@ function HomePage() {
 `
 
 Componentで配列を扱おうとする時、Reactは配列内の要素を一意に識別する何かを必要とする。これはDOMを更新するときに要素を識別するときに認識される。
+
+---
+
+## Practice 14
+
+[参考サイト](https://nextjs.org/learn/foundations/from-react-to-nextjs/getting-started-with-nextjs "")

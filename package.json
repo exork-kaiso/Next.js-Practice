@@ -1,0 +1,24 @@
+{
+  "name": "next-js-practice-01",
+  "version": "1.0.0",
+  "description": "[参考サイト](https://nextjs.org/learn/foundations/from-javascript-to-react/updating-ui-with-javascript \"\")",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exork-kaiso/Next.js-Practice-01.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/exork-kaiso/Next.js-Practice-01/issues"
+  },
+  "homepage": "https://github.com/exork-kaiso/Next.js-Practice-01#readme",
+  "dependencies": {
+    "next": "^13.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

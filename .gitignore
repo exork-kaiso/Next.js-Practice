@@ -1,0 +1,3 @@
+# 以下のディレクトリ以下をgitの管理から外す。
+node_modules/
+.next/
